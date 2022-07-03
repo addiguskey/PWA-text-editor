@@ -32,7 +32,6 @@ registerRoute(
   new StaleWhileRevalidate({
     cacheName: "asset-cache",
     plugins: [
-      // This plugin will cache responses with these headers to a maximum-age of 30 days
       new CacheableResponsePlugin({
         statuses: [0, 200],
       }),
